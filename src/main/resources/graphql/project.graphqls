@@ -1,0 +1,8 @@
+type Project {
+    id: ID!
+    user: User
+    name: String!
+    createdAt: DateTime
+    updatedAt: DateTime
+    stoppedAt: DateTime
+}

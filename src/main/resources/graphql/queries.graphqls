@@ -1,0 +1,8 @@
+type Query {
+    userById(id: ID!): User
+
+    projectById(id: ID!): Project!
+    projectsByUserId(userId: ID): [Project]!
+
+    getEntriesByProjectId(projectId: ID!): [Entry]!
+}

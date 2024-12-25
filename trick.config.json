@@ -1,0 +1,14 @@
+{
+  "iteration_count": 114514,
+  "targets": [
+    {
+      "secret_name": "SUPERVISOR_SERVER_TRICK_SECRET_NAME",
+      "files": [
+        "src/main/resources/database.properties",
+        "src/main/resources/password.properties",
+        "src/main/resources/jwt.properties"
+      ]
+    }
+  ],
+  "default_secret_name": "SUPERVISOR_SERVER_TRICK_SECRET_NAME"
+}
