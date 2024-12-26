@@ -10,16 +10,15 @@ import supervisor.graphql.scalar.DateTimeScalar
 class GraphQLConfiguration {
     @Bean
     fun dateTimeScalar(): GraphQLScalarType =
-        GraphQLScalarType.newScalar()
+        wGraphQLScalarType.newScalar()
             .name("DateTime")
             .description("A custom scalar to handle ISO-8601 DateTime")
             .coercing(DateTimeScalar())
             .build()
 
     @Bean
-    fun runtimeWiringConfigurer(
-        dateTimeScalar: GraphQLScalarType
-    ) = RuntimeWiringConfigurer { wiringBuilder ->
-        wiringBuilder.scalar(dateTimeScalar)
-    }
+    fun runtimeWiringConfigurer(dateTimeScalar: GraphQLScalarType) =
+        RuntimeWiringConfigurer { wiringBuilder ->
+            wiringBuilder.scalar(dateTimeScalar)
+        }
 }

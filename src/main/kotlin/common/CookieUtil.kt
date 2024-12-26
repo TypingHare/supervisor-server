@@ -7,11 +7,14 @@ import supervisor.common.constant.ContextKey
 
 @Component
 class CookieUtil {
+    /**
+     * Sets a cookie on the client side.
+     */
     fun set(context: GraphQLContext, cookie: Cookie) {
         getCookieList(context).add(activate(cookie))
     }
 
-    fun getCookieList(context: GraphQLContext): MutableList<Cookie> {
+    private fun getCookieList(context: GraphQLContext): MutableList<Cookie> {
         return context
             .getOrDefault(ContextKey.COOKIE_LIST, mutableListOf<Cookie>())
             .apply { context.put(ContextKey.COOKIE_LIST, this) }

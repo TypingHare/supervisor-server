@@ -41,7 +41,7 @@ class ProjectService(
         })
     }
 
-    fun changeProjectName(project: Project, projectName: String): Project {
+    fun updateProjectName(project: Project, projectName: String): Project {
         val userId = project.user?.id!!
         throwIf(existProject(userId, projectName)) {
             ResourceAlreadyExistException.PROJECT

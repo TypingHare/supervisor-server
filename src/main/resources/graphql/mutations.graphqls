@@ -3,7 +3,7 @@ type Mutation {
     signIn(emailOrUsername: String!, password: String!): User!
 
     createProject(name: String!): Project!
-    changeProjectName(id: ID!, name: String!): Project!
+    updateProjectName(id: ID!, name: String!): Project!
     deleteProjectById(id: ID!): Project!
 
     createEntry(projectId: ID!): Entry!

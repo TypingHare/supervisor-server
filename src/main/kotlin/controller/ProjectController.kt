@@ -37,13 +37,13 @@ class ProjectController(
     }
 
     @MutationMapping
-    fun changeProjectName(
+    fun updateProjectName(
         @Argument id: Long,
         @Argument name: String,
         @ContextValue token: String
     ): Project {
         val project = checkProjectUpdateAuthorization(token, id)
-        return projectService.changeProjectName(project, name)
+        return projectService.updateProjectName(project, name)
     }
 
     @MutationMapping
