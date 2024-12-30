@@ -10,7 +10,7 @@ import supervisor.graphql.scalar.DateTimeScalar
 class GraphQLConfiguration {
     @Bean
     fun dateTimeScalar(): GraphQLScalarType =
-        wGraphQLScalarType.newScalar()
+        GraphQLScalarType.newScalar()
             .name("DateTime")
             .description("A custom scalar to handle ISO-8601 DateTime")
             .coercing(DateTimeScalar())

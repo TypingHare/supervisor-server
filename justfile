@@ -1,7 +1,8 @@
 ### Dependencies ###
-# - gradle > 8.12
-# - grc > 1.13
-# - trick > 1.0.6
+# - just >= 1.36.0
+# - gradle >= 8.12
+# - grc >= 1.13
+# - trick >= 1.0.6
 
 dev:
     @grc -c grc.config.ini gradle bootRun --quiet
