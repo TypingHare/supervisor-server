@@ -1,0 +1,24 @@
+type User {
+    id: ID!
+    username: String!
+    email: String!
+}
+
+type Project {
+    id: ID!
+    user: User
+    name: String!
+    createdAt: DateTime
+    updatedAt: DateTime
+    stoppedAt: DateTime
+}
+
+type Entry {
+    id: ID!
+    user: User
+    project: Project
+    description: String!
+    duration: Int!
+    startedAt: DateTime
+    stoppedAt: DateTime
+}

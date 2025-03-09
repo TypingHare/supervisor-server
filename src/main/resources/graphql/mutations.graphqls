@@ -1,0 +1,13 @@
+type Mutation {
+    createUser(username: String!, email: String!, password: String!): User!
+    signIn(emailOrUsername: String!, password: String!): User!
+
+    createProject(name: String!): Project!
+    updateProjectName(id: ID!, name: String!): Project!
+    deleteProjectById(id: ID!): Project!
+
+    createEntry(projectId: ID!): Entry!
+    updateEntryDescription(id: ID!, description: String!): Entry!
+    startEntry(id: ID!): Entry!
+    stopEntry(id: ID!): Entry!
+}

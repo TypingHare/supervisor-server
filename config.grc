@@ -1,0 +1,11 @@
+regexp=^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}
+colour=cyan
+-
+regexp=ERROR
+colour=red
+-
+regexp=WARN
+colour=yellow
+-
+regexp=INFO
+colour=green
