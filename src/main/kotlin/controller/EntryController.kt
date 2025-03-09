@@ -57,6 +57,13 @@ class EntryController(
         @ContextValue token: String
     ): Entry = entryService.stopEntry(checkEntryUpdateAuthorization(token, id))
 
+    /**
+     * Retrieves the entry by the entry ID and checks if the user is allowed to
+     * update it.
+     *
+     * @throws ValidationException if the user is not allowed to update the
+     *                             entry.
+     */
     @Throws(
         ValidationException::class,
         ResourceNotFoundException::class,

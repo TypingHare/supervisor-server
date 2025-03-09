@@ -45,7 +45,7 @@ class EntryService(
     @Throws(InvalidOperationException::class)
     fun startEntry(entry: Entry): Entry {
         if (entry.startedAt != null) {
-            InvalidOperationException.START_STARTED_ENTRY
+            throw InvalidOperationException.START_STARTED_ENTRY
         }
 
         return entryRepository.save(entry.apply {
@@ -56,11 +56,11 @@ class EntryService(
     @Throws(InvalidOperationException::class)
     fun stopEntry(entry: Entry): Entry {
         if (entry.startedAt == null) {
-            InvalidOperationException.STOP_NOT_STARTED_ENTRY
+            throw InvalidOperationException.STOP_NOT_STARTED_ENTRY
         }
 
         if (entry.stoppedAt != null) {
-            InvalidOperationException.STOP_STOPPED_ENTRY
+            throw InvalidOperationException.STOP_STOPPED_ENTRY
         }
 
         return entryRepository.save(entry.apply {
